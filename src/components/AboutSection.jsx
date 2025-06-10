@@ -27,7 +27,10 @@ export const AboutSection = () => {
                 Get in Touch
               </a>
               <a
-                href=""
+                href="/myCV.docx"
+                target="_blank"
+                download={"myCV.docx"}
+                rel="noopener noreferrer"
                 className="px-6 py-2 rounded-full border border-white  bg-secondary hover:bg-secondary/10 transition-colors duration-300 cosmic-button"
               >
                 {" "}
