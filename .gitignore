@@ -25,9 +25,8 @@ dist-ssr
 
 
 #Images
-+public/*.png
-+public/*.jpg
-+public/*.jpeg
-+public/*.gif
-+public/*.svg
-
+public/*.png
+public/*.jpg
+public/*.jpeg
+public/*.gif
+public/*.svg
