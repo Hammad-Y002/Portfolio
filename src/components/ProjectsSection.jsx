@@ -15,18 +15,18 @@ const projects = [
     description: "Beautiful Portfolio Website",
     image: "/Projects/portfolio.png",
     tags: ["React", "Tailwind CSS"],
-    demoURL: "#",
-    githubURL: "https://github.com/Hammad-Y002/Portfolio",
+    demoURL: "https://portfolio-one-ivory-22.vercel.app/",
+    githubURL: "https://github.com/Hammad-Y002/portfolio",
   },
-  {
-    id: 3,
-    title: "Project 3",
-    description: "A simple JS Calculator ",
-    image: "",
-    tags: ["HTML", "CSS", "JavaScript"],
-    demoURL: "#",
-    githubURL: "#",
-  },
+  // {
+  //   id: 3,
+  //   title: "Project 3",
+  //   description: "A simple JS Calculator ",
+  //   image: "",
+  //   tags: ["HTML", "CSS", "JavaScript"],
+  //   demoURL: "#",
+  //   githubURL: "#",
+  // },
 ];
 
 export const ProjectsSection = () => {
