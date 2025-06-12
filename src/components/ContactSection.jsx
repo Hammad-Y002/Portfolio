@@ -2,6 +2,7 @@ import {
   Instagram,
   Linkedin,
   // Whatsapp,
+  Github,
   Mail,
   MapPin,
   Phone,
@@ -10,24 +11,42 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
-    setTimeout(() => {
+    try {
+      await emailjs.sendForm(
+        'service_odbkifl', 
+        'template_pzlsqkk', 
+        formRef.current,
+        '57kjIklSzH4qbPpmP' 
+      );
+
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you soon.",
       });
+
+      // Reset form
+      formRef.current.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -99,8 +118,8 @@ export const ContactSection = () => {
                 >
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank">
-                  <Twitter />
+                <a href="https://github.com/Hammad-Y002" target="_blank">
+                  <Github />
                 </a>
                 {/* <a href="https://wa.me/+923026835988" target="_blank">
                   <Whatsapp />
@@ -114,11 +133,10 @@ export const ContactSection = () => {
 
           <div
             className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
           >
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-            <form className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
@@ -151,7 +169,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                  placeholder="example@gmail.com"
+                  placeholder="hammadyaseen002@gmail.com"
                 />
               </div>
 
