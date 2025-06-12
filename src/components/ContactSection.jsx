@@ -25,10 +25,10 @@ export const ContactSection = () => {
 
     try {
       await emailjs.sendForm(
-        'service_odbkifl', 
-        'template_pzlsqkk', 
+        'service_odbkifl',
+        'template_pzlsqkk',
         formRef.current,
-        '57kjIklSzH4qbPpmP' 
+        '57kjIklSzH4qbPpmP'
       );
 
       toast({
@@ -67,42 +67,42 @@ export const ContactSection = () => {
               Contact Information
             </h3>
 
-            <div className="space-y-6 justify-center">
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Mail className="h-6 w-6 text-primary" />{" "}
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="p-3 rounded-full bg-primary/10 shrink-0">
+                  <Mail className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Email</h4>
+                <div className="flex-1">
+                  <h4 className="font-medium">Email</h4>
                   <a
                     href="mailto:hammadyaseen002@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors block truncate"
                   >
                     hammadyaseen002@gmail.com
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Phone className="h-6 w-6 text-primary" />{" "}
+              <div className="flex items-center space-x-4">
+                <div className="p-3 rounded-full bg-primary/10 shrink-0">
+                  <Phone className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Phone</h4>
+                <div className="flex-1">
+                  <h4 className="font-medium">Phone</h4>
                   <a
                     href="tel:+923026835988"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors block truncate"
                   >
                     +923026835988
                   </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />{" "}
+              <div className="flex items-center space-x-4">
+                <div className="p-3 rounded-full bg-primary/10 shrink-0">
+                  <MapPin className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
+                <div className="flex-1">
+                  <h4 className="font-medium">Location</h4>
+                  <a className="text-muted-foreground hover:text-primary transition-colors block truncate">
                     Bahawalpur, Punjab, Pakistan
                   </a>
                 </div>
